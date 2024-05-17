@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Scrolling WebSite</title>
+    <link rel="stylesheet" href="stylle.css">
+</head>
+<body>
+    <section class="zoom">
+        <img src="images/mountain1.png" id="layer1">
+        <img src="images/mountain2.png" id="layer2">
+        <img src="images/text.png" id="text">
+    </section>
+    <section class="content">
+        <p>
+            Salut, eu sunt Gabriel! </p>
+          <p>        Numele meu este Grecu Alexandru-Gabriel de la Universitatea Politehnica Timisoara, Facultatea de Electronica, Telecomunicatii si Tehnologii Informationale. 
+            Sunt interesat de a evolua pe o pozitie de Software Developer, considerand ca imi ofera ocazia de a aplica cunostintele dobandite pe parcurusl anilor de studiu sau de lucru si posibilitatea de invatare si dezvoltare alaturi de o echipa ce se remarca prin profesionalism.
+            Principalele aptitudini care mă pot recomanda le consider a fi capacitatea de a organiza și sintetiza într-un mod cât mai clar diversele subiecte legate de tehnic , perseverența, spiritul practic de analiză și atenția la detalii, aspecte mă ajută să privesc în ansamblu și să abordez problemele din diferite unghiuri, planificarea și organizarea activităților într-un mod eficient..
+            Mă consider așadar o persoană ambițioasă și dornică de a învăța lucruri noi. In ultimul an am lucrat in cadrul platformei educationale Platforma IT, unde am ajutat cursanti, clienti sa treaca peste blocajele si problemele intampinate in studierea diferitor tehnologii precum Java, Python, HTML, CSS, JavaScript, fiind foarte bucuros si foarte pasionat de a ajuta oameni. :) </p>
+    </section>
+
+    
+
+    <script type="text/javascript">
+        var layer1=document.getElementById('layer1')
+        scroll=window.pageYOffset;
+        document.addEventListener('scroll', function(e){
+            var offset=window.pageYOffset;
+            scroll=offset;
+            layer1.style.width=(100+scroll/5)+'%';
+        })
+        var layer2=document.getElementById('layer2')
+        scroll=window.pageYOffset;
+        document.addEventListener('scroll', function(e){
+            var offset=window.pageYOffset;
+            scroll=offset; 
+            layer2.style.width=(100+scroll/5)+'%';
+            layer2.style.left=scroll/50+'%';
+        });
+        var text=document.getElementById('text')
+        scroll=window.pageYOffset;
+        document.addEventListener('scroll', function(e){
+            var offset=window.pageYOffset;
+            scroll=offset; 
+            layer2.style.width=(100+scroll/5)+'%';
+            text.style.top= - scroll/20+'%';
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+    <!--
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="assets/stars.png" id="stars">
+        <img src="assets/moon.png" id="moon">
+        <img src="assets/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="assets/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make <br>
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, <br>
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing <br>
+            Lorem Ipsum passages,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make <br>
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, <br>
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing <br>
+            Lorem Ipsum passagesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make <br>
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, <br>
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing <br>
+            Lorem Ipsum passagesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make <br>
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, <br>
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing <br>
+            Lorem Ipsum passagesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make <br>
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, <br>
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing <br>
+            Lorem Ipsum passagesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make <br>
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, <br>
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing <br>
+            Lorem Ipsum passages</p>
+    </div>
+    <script>
+        let stars=document.getElementById('stars');
+        let moon=document.getElementById('moon');
+        let mountains_behind=document.getElementById('mountains_behind');
+        let text=document.getElementById('text');
+        let btn=document.getElementById('btn');
+        let mountains_front=document.getElementById('mountains_front');
+        let header=document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value=window.scrollY;
+            stars.style.left=value*0.25+'px';
+            moon.style.top=value*1.05+'px';
+            mountains_behind.style.top=value*0.5+'px';
+            mountains_front.style.top=value*0+'px';
+            text.style.marginRight=value*4+'px';
+            text.style.marginTop=value*1.5+'px';
+            btn.style.marginTop=value*1.5+'px';
+            header.style.top=value*0.5+'px';
+        })
+    </script>-->
+</body>
+</html>

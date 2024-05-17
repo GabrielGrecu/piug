@@ -1,0 +1,98 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+/* Header Styles */
+.mnb {
+    background-color: lightgray;
+    padding: 0.75rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.navigation a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.navigation a:hover {
+    background-color: #fff;
+    color: #2b1055;
+}
+
+/* Footer Styles */
+.p {
+    background-color: lightgray;
+    padding: 0.75rem 3rem;
+    text-align: center;
+}
+
+.active a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Section Styles */
+#despre-mine {
+    background-color: #fff;
+    color: #000;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
